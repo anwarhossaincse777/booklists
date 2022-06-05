@@ -36,5 +36,12 @@ body {
 
     margin-top:0.5rem;
   }
+
+  .book h4{
+
+    color: #617d98;
+    fontsize:'0.75rem';
+    marginTop:'0.75rem'
+  }
 }
 

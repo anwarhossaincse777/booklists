@@ -4,46 +4,47 @@ import './index.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
+// setup variables
+
+const firstBook={
+     author:'Paperback',
+     title:'Where the Crawdads Sing  Delia Owens',
+     img:'https://images-na.ssl-images-amazon.com/images/I/61m1Vxw8tiL._AC_UL604_SR604,400_.jpg',
+
+}
+
+const secondBook={
+     author:'Sumon',
+     title:'This book is written by sumon',
+     img:'https://images-na.ssl-images-amazon.com/images/I/610QYM5NxRL._AC_UL604_SR604,400_.jpg',
+
+}
+
+
+
 
 function Booklist(){
 
 
     return <section className='booklist'>
-        <Book/>
-        <Book/>
-        <Book/>
-        <Book/>
-        <Book/>
-        <Book/>
-        <Book/>
-        <Book/>
-        <Book/>
-        <Book/>
+        <Book img={firstBook.img} title={firstBook.title} author={firstBook.author}/>
+        <Book img={secondBook.img} title={secondBook.title} author={secondBook.author}/>
        </section>
 }
 
 
-const Book=()=>{
+const Book=(props)=>{
 
     return (
         
         <article className='book'>
-            <Image/>
-            <Title/>
-            <Author/>
+            <img src={props.img} alt=""/>
+            <h1>{props.title}</h1>
+            <h4>{props.author}</h4>
+
         </article>
     );
 }
-
-
-      const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/61m1Vxw8tiL._AC_UL604_SR604,400_.jpg" alt=""/>
-        
-
-            const Title = () => <h1>Where the Crawdads Sing  Delia Owens</h1>
-            const Author = () => <h4 style={{color:'#617d98'}}>Paperback</h4>
-
-
-
 
 
 
