@@ -27,7 +27,16 @@ function Booklist(){
 
 
     return <section className='booklist'>
-        <Book img={firstBook.img} title={firstBook.title} author={firstBook.author}/>
+        <Book img={firstBook.img} title={firstBook.title} author={firstBook.author}>
+
+            {/*//how to use children props*/}
+
+            <p> Here P is the Children Props</p>
+
+        </Book>
+
+
+
         <Book img={secondBook.img} title={secondBook.title} author={secondBook.author}/>
        </section>
 }
@@ -36,15 +45,16 @@ function Booklist(){
 const Book=(props)=>{
 
     //props destructuring
-    const {img,title,author}= props;
+    const {img,title,author,children}= props;
 
 
     return (
         
         <article className='book'>
-            <img src={props.img} alt=""/>
-            <h1>{props.title}</h1>
-            <h4>{props.author}</h4>
+            <img src={img} alt=""/>
+            {children}
+            <h1>{title}</h1>
+            <h4>{author}</h4>
 
         </article>
     );
