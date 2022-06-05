@@ -35,6 +35,10 @@ function Booklist(){
 
 const Book=(props)=>{
 
+    //props destructuring
+    const {img,title,author}= props;
+
+
     return (
         
         <article className='book'>
